@@ -9,7 +9,7 @@ sales = 0
 
 # Function to handle ticket selling process.
 
-def selling_tickets(num_tix):
+def selling_tickets(sold_tix):
    
     global total_tix
    
@@ -17,13 +17,13 @@ def selling_tickets(num_tix):
 
 # Telling the user the constraints of the ticket sales.
 
-    if num_tix > max_per_person:
+    if sold_tix > max_per_person:
     
         return "You can only buy up to 4 tickets."
 
 # Checking if there are enough tickets available.
    
-    elif num_tix > total_tix:
+    elif sold_tix > total_tix:
    
         return "Not enough tickets available."
 
@@ -31,11 +31,11 @@ def selling_tickets(num_tix):
    
     else:
     
-        total_tix -= num_tix
+        total_tix -= sold_tix
     
         sales += 1
       
-        return f"You have successfully purchased {num_tix} tickets."
+        return f"You have successfully purchased {sold_tix} tickets."
 
 # Main function to run the ticket selling loop to keep track of sales and remaining tickets.
 
@@ -51,9 +51,9 @@ def main():
 
 # Asking user for number of tickets they want to buy and displaying remaining tickets.
         
-            num_tix = int(input(f"There are {total_tix} tickets available. How many would you like to purchase? "))
+            sold_tix = int(input(f"There are {total_tix} tickets available. How many would you like to purchase? "))
           
-            message = selling_tickets(num_tix)
+            message = selling_tickets(sold_tix)
           
             print(message)
           
@@ -71,4 +71,5 @@ if __name__ == "__main__":
   
 
     main()
+
 
