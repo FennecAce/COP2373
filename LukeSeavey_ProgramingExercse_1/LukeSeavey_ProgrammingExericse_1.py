@@ -1,7 +1,7 @@
 # Luke Seavey Programming Exercise 1
 # This program manages ticket sales for presale cinema tickets up to a max 40 with only 4 per person.
 
-total_tix = 20
+total_tix = 10
 
 max_per_person = 4
 
@@ -69,4 +69,5 @@ def main():
 
 if __name__ == "__main__":
   
+
     main()
