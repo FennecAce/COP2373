@@ -51,7 +51,7 @@ def main():
 
 # Asking user for number of tickets they want to buy and displaying remaining tickets.
         
-            num_tix = int(input(f"There are {total_tix} tickets available. How many would you like to buy? "))
+            num_tix = int(input(f"There are {total_tix} tickets available. How many would you like to purchase? "))
           
             message = selling_tickets(num_tix)
           
@@ -71,3 +71,4 @@ if __name__ == "__main__":
   
 
     main()
+
